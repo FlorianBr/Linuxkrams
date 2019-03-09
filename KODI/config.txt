@@ -10,5 +10,5 @@ start_x=1
 
 disable_splash=1
 
-dtoverlay=lirc-rpi,gpio_in_pin=17,gpio_out_pin=23
+dtoverlay=lirc-rpi,gpio_in_pin=18,gpio_out_pin=23
 dtparam=spi=on
