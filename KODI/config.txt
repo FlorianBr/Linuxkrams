@@ -1,0 +1,14 @@
+hdmi_ignore_cec_init=1
+hdmi_drive=2
+hdmi_group=1
+hdmi_mode=16
+hdmi_force_hotplug=1
+
+disable_overscan=1
+
+start_x=1
+
+disable_splash=1
+
+dtoverlay=lirc-rpi,gpio_in_pin=17,gpio_out_pin=23
+dtparam=spi=on
