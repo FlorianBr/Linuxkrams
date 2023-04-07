@@ -31,6 +31,10 @@ Currently with scripts for:
 
 Scripts for Munin. Probably deprecated, I havent used munin in a while
 
+# RRD
+
+Scripts for RRD-Tool. To generate databases and dump RRS-Data into a influxdb
+
 # Squid
 
 Scripts for Squid proxy to filter spam and update filter lists. Probably deprecated, I replaced squid with PiHole
