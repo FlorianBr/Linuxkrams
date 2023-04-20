@@ -26,6 +26,7 @@ Currently with scripts for:
 - Fritzbox WAN traffic
 - Current water level
 - Current weather
+- PiHoles statistics
 
 # Munin
 
