@@ -10,6 +10,15 @@ My conky scripts. On all of my machines I use six panels on the bottom left of m
  5. Network infos
  6. Processes
 
+# Docker
+
+Docker compose files and other stuff I uso (or used) for docker containers:
+
+- Grafana stack with influxdb, grafana, telegraf and chronograf
+- Mosquitto MQTT broker
+- PiHole for fighting spam and ads
+- zigbee2mqtt for my zigbee network
+
 # KODI
 
 Stuff for my Raspberry Pi running KODI. Probably deprecated because I haven't used it in a while, I mostly use a Nvidia Shield now.
