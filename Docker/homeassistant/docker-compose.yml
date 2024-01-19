@@ -1,0 +1,75 @@
+version: '2.4'
+
+services:
+    homeassistant:
+        image: lscr.io/linuxserver/homeassistant:latest
+        container_name: homeassistant
+        network_mode: host
+        environment:
+            - PUID=1000
+            - PGID=1000
+            - TZ=Europe/Berlin
+        volumes:
+            - ./data:/config
+            - /run/dbus:/run/dbus:ro
+        restart: unless-stopped
+        ports:
+            - 8123:8123     # access home assistant
+            - 1900:1900/udp # SSDP Discovery and uPNP
+            - 5353:5353/udp # mDNS
+            - 5683:5683/udp # Shelly
+            - 80:80         # Emulated Hue
+
+    faster-whisper:
+        image: lscr.io/linuxserver/faster-whisper:latest
+        container_name: faster-whisper
+        environment:
+            - PUID=1000
+            - PGID=1000
+            - TZ=Europe/Berlin
+            - WHISPER_MODEL=small-int8
+            - WHISPER_BEAM=1
+            - WHISPER_LANG=de
+        volumes:
+            - ./data-whisper:/config
+        ports:
+            - 10300:10300
+        restart: unless-stopped
+        networks:
+            - homeassistant
+        dns: 8.8.8.8
+
+    piper:
+        image: lscr.io/linuxserver/piper:latest
+        container_name: piper
+        environment:
+            - PUID=1000
+            - PGID=1000
+            - TZ=Etc/UTC
+            - PIPER_VOICE=de_DE-kerstin-low
+        volumes:
+            - ./data-piper:/config
+        ports:
+            - 10200:10200
+        networks:
+            - homeassistant
+        dns: 8.8.8.8
+
+    openwakeword:
+        container_name: openwakeword
+        image: rhasspy/wyoming-openwakeword
+        restart: unless-stopped
+        volumes:
+            - ./data-openwakeword:/custom
+        command:
+            --preload-model 'ok_nabu' --custom-model-dir /custom
+        ports:
+            - '10400:10400'
+        networks:
+            - homeassistant
+        dns: 8.8.8.8
+
+networks:
+    homeassistant:
+        name: homeassistant
+        driver: bridge

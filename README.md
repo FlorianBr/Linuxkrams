@@ -18,6 +18,7 @@ Docker compose files and other stuff I uso (or used) for docker containers:
 - Mosquitto MQTT broker
 - PiHole for fighting spam and ads
 - zigbee2mqtt for my zigbee network
+- Home Assistant with Piper, Whisper and OpenWakeWord for assist (locally running voice assistant)
 
 # KODI
 
