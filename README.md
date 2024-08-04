@@ -1,4 +1,49 @@
 
+# Stuff for my hyprland environment
+
+I recently moved from KDE to the tiling WM hyprland. With fancy stuff like animated background and so on. NOT in a fingers-always-in-the-keyboard configuration, I usually use a macropad to control the workspaces, windows and so on.
+
+TODO:
+
+- Tweaking waybar
+- Monitor off in swaylock
+- colors and font in kitty
+- Remove rofi with TBD?
+- Customize wlogout
+- Better system monitor in waybar?
+
+## Swaylock
+
+The lock screen I currently use. Maybe one day replaced by hyprlock?
+
+## hypr
+
+All the config stuff for hyprland. Still a heavy work in progress always tweaking the settings here and there
+
+## kitty
+
+The terminal used in hyprland. Not sure yet if I will stick to it or try something else
+
+## mako
+
+The notification manager. Nothing fancy here
+
+## rofi
+
+rofi applauncher. At the moment only used for the clipboard history
+
+## walker
+
+The applauncher I currently used instead of rofi
+
+## waybar
+
+The bar to display all sorts of data, current workspace, window title and so on
+
+## wlogout
+
+The logout screen. Not really customized yet
+
 # Conky
 
 My conky scripts. On all of my machines I use six panels on the bottom left of my monitor to display data:

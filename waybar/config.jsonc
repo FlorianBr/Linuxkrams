@@ -1,0 +1,189 @@
+{
+    "layer": "top",
+    "position": "top",
+    "mod": "dock",
+    "exclusive": true,
+    "passthrough": false,
+    "gtk-layer-shell": true,
+    "height": 33,
+    "modules-left": [
+        "cpu",
+        "disk",
+        "memory",
+        "load",
+        "temperature#1",
+        "temperature#2",
+        "temperature#3"
+    ],
+    "modules-center": [
+        "hyprland/workspaces",
+        "hyprland/window",
+        "mpris",
+        "privacy"
+    ],
+    "modules-right": [
+        "network",
+        "pulseaudio",
+        "tray",
+        "custom/clipboard",
+        "clock",
+        "custom/lock",
+        "custom/power"
+    ],
+    "cpu": {
+        "interval": 1,
+        "format": "   {usage}%",
+        "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+    },
+    "hyprland/workspaces": {
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "separate-outputs": true,
+        "format": "<span font='16px'>{icon}</span>",
+        "format-icons": {
+            "1": "①",
+            "2": "②",
+            "3": "③",
+            "4": "④",
+            "5": "⑤",
+            "6": "⑥",
+            "7": "⑦",
+            "8": "⑧",
+            "9": "❾",
+            "10": "❿"
+        },
+        "persistent-workspaces": {
+            "*": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10
+            ]
+        }
+    },
+    "hyprland/window": {
+        "format": "☰ {initialTitle} | {title} ☰",
+        "max-length": 40,
+        "separate-outputs": true
+    },
+    "clock": {
+        "format": "{:%H:%M:%S }",
+        "interval": 1,
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "weeks-pos": "right",
+            "format": {
+                "today": "<span color='#FFFFFF'><b><u>{}</u></b></span>",
+                "weeks": "<span color='#aeaeae'><b>W{:%V}</b></span>",
+                "weekdays": "<span color='#aeaeae'><b>{}</b></span>"
+            },
+        }
+    },
+    "disk": {
+        "interval": 30,
+        "format": " {percentage_used}%",
+        "path": "/"
+    },
+    "memory": {
+        "format": " {percentage}%"
+    },
+    "load": {
+        "interval": 10,
+        "format": "☢ {load1}"
+    },
+    "custom/clipboard": {
+        "format": " 󰅍 ",
+        "on-click": "sh -c 'cliphist list | rofi -dmenu | cliphist decode | wl-copy'"
+    },
+    "custom/lock": {
+        "format": "  ",
+        "on-click": "sh -c '(sleep 0.5s; swaylock)' & disown",
+        "tooltip": false
+    },
+    "custom/power": {
+        "format": "  ",
+        "on-click": "sh -c '(sleep 0.5s; wlogout --protocol layer-shell)' & disown",
+        "tooltip": false
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 10
+    },
+    "mpris": {
+        "format": "<span font='10px'>{artist} - {title}</span> ☰",
+        "format-len": 10
+    },
+    "temperature#1": {
+        "hwmon-path": "/sys/devices/platform/nct6687.2592/hwmon/hwmon4/temp1_input",
+        "format": " {temperatureC}°C",
+        "interval": 1
+    },
+    "temperature#2": {
+        "hwmon-path": "/sys/devices/pci0000:00/0000:00:02.2/0000:12:00.0/nvme/nvme0/hwmon1/temp2_input",
+        "format": " {temperatureC}°C",
+        "interval": 1
+    },
+    "temperature#3": {
+        "hwmon-path": "/sys/devices/pci0000:00/0000:00:01.1/0000:01:00.0/0000:02:00.0/0000:03:00.0/hwmon/hwmon2/temp2_input",
+        "format": "♔ {temperatureC}°C",
+        "interval": 1
+    },
+    "pulseaudio": {
+        "format": " {icon} ",
+        "format-muted": "",
+        "on-click": "~/.config/hypr/scripts/volume --toggle",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "~/.config/hypr/scripts/volume --inc",
+        "on-scroll-down": "~/.config/hypr/scripts/volume --dec",
+        "scroll-step": 5,
+        "format-icons": {
+            "headphone": "",
+            "bluetooth": "󰥰",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "🕨",
+                "🕩",
+                "🕪"
+            ]
+        },
+        "tooltip": true,
+        "tooltip-format": "{volume}% {icon}"
+    },
+    "network": {
+        "format": "󰈀 <span font='10px'>{bandwidthUpBytes} {bandwidthDownBytes}</span>",
+        "format-disconnected": "󱐅",
+        "tooltip-format": "IP: {ipaddr}"
+    },
+    "privacy": {
+        "icon-spacing": 4,
+        "icon-size": 18,
+        "transition-duration": 250,
+        "modules": [
+            {
+                "type": "screenshare",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-out",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            },
+            {
+                "type": "audio-in",
+                "tooltip": true,
+                "tooltip-icon-size": 24
+            }
+        ]
+    }
+}

@@ -1,0 +1,48 @@
+# Options
+show-failed-attempts
+ignore-empty-password
+daemonize
+fade-in=0.5
+grace=10
+# grace-no-mouse
+grace-no-touch
+
+# Appearance
+clock
+timestr=%H:%M
+datestr=%a, %e. %B
+font=ProggyCleanTT
+
+indicator
+indicator-caps-lock
+indicator-idle-visible
+indicator-radius=400
+indicator-thickness=20
+# Inside: Always transparent
+inside-color=ffffff00
+inside-clear-color=ffffff00
+inside-ver-color=ffffff00
+inside-wrong-color=ffffff00
+# Key Press Segment
+key-hl-color=a80c26ff
+# Ring Line: Always transparent
+line-color=ffffff00
+line-ver-color=ffffff00
+line-clear-color=ffffff00
+line-wrong-color=ffffff00
+# Ring Color
+ring-color=ffffff00
+ring-ver-color=0000ffa0
+ring-wrong-color=ff0000a0
+ring-clear-color=00ff00a0
+# Ring separator
+separator-color=ffffff00
+# The Text
+text-color=a0a0a0
+text-clear-color=a0a0a0
+text-ver-color=a0a0a0
+text-wrong-color=ff0000
+
+screenshot
+effect-blur=50x1
+effect-greyscale
