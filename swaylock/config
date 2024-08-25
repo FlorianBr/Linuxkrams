@@ -3,7 +3,7 @@ show-failed-attempts
 ignore-empty-password
 daemonize
 fade-in=0.5
-grace=10
+# grace=10
 # grace-no-mouse
 grace-no-touch
 
