@@ -103,11 +103,12 @@ tooltip {
 
 #workspaces {
     padding: 0;
+    padding-left: 1em;
     background: @main_stage1;
 }
 
 #custom-right1 {
-    font-size: 11.5pt;
+    font-size: 16pt;
     background: transparent;
     color: @main_stage1;
     margin-bottom: -2px;
@@ -116,7 +117,7 @@ tooltip {
 }
 
 #custom-left2 {
-    font-size: 11.5pt;
+    font-size: 16pt;
     color: @main_stage1;
     background: transparent;
     margin-bottom: -2px;
@@ -132,7 +133,7 @@ tooltip {
 }
 
 #custom-left3 {
-    font-size: 11.5pt;
+    font-size: 16pt;
     color: @main_stage2;
     background: @main_stage1;
     margin-bottom: -2px;
@@ -147,7 +148,7 @@ tooltip {
 }
 
 #custom-left4 {
-    font-size: 11.5pt;
+    font-size: 16pt;
     color: @main_stage3;
     background: @main_stage2;
     margin-bottom: -2px;
@@ -161,9 +162,9 @@ tooltip {
 }
 
 #custom-leftin1 {
-    font-size: 11.5pt;
-    color: @main_stage3;
-    background: @main_stage4;
+    font-size: 16pt;
+    color: @main_stage4;
+    background: @main_stage3;
     margin-bottom: -2px;
 }
 
@@ -173,9 +174,9 @@ tooltip {
 }
 
 #custom-rightin1 {
-    font-size: 11.5pt;
-    color: @main_stage3;
-    background: @main_stage4;
+    font-size: 16pt;
+    color: @main_stage4;
+    background: @main_stage3;
     margin-bottom: -2px;
 }
 
@@ -185,7 +186,7 @@ tooltip {
 }
 
 #custom-right2 {
-    font-size: 11.5pt;
+    font-size: 16pt;
     color: @main_stage3;
     background: @main_stage2;
     margin-bottom: -2px;
@@ -195,11 +196,16 @@ tooltip {
 
 #clock.date {
     text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
+    background: @main_stage3;
+}
+
+#battery {
+    text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
     background: @main_stage2;
 }
 
 #custom-right3 {
-    font-size: 11.5pt;
+    font-size: 16pt;
     color: @main_stage2;
     background: @main_stage1;
     margin-bottom: -2px;
@@ -213,7 +219,7 @@ tooltip {
 }
 
 #custom-right4 {
-    font-size: 11.5pt;
+    font-size: 16pt;
     color: @main_stage1;
     background: transparent;
     margin-bottom: -2px;
@@ -232,7 +238,7 @@ tooltip {
 }
 
 #custom-left5 {
-    font-size: 11.5pt;
+    font-size: 16pt;
     color: @main_stage1;
     background: transparent;
     margin-bottom: -2px;
@@ -246,7 +252,7 @@ tooltip {
 }
 
 #custom-left6 {
-    font-size: 11.5pt;
+    font-size: 16pt;
     color: @main_stage2;
     background: @main_stage1;
     margin-bottom: -2px;
@@ -260,7 +266,7 @@ tooltip {
 }
 
 #custom-left7 {
-    font-size: 11.5pt;
+    font-size: 16pt;
     color: @main_stage3;
     background: @main_stage2;
     margin-bottom: -2px;
@@ -274,7 +280,7 @@ tooltip {
 }
 
 #custom-left8 {
-    font-size: 11.5pt;
+    font-size: 16pt;
     color: @main_stage4;
     background: @main_stage3;
     margin-bottom: -2px;
@@ -289,7 +295,7 @@ tooltip {
 }
 
 #custom-paddingr {
-    font-size: 11.5pt;
+    font-size: 16pt;
     margin-bottom: -2px;
     padding-right: 2px;
     background: @main_stage4;
