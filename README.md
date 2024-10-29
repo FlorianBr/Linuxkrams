@@ -40,6 +40,8 @@ The applauncher I currently used instead of rofi
 
 The bar to display all sorts of data, current workspace, window title and so on
 
+ ![Screenshot](waybar.png)
+
 ## wlogout
 
 The logout screen. Not really customized yet
