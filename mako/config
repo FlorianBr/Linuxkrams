@@ -7,7 +7,7 @@ on-button-left=dismiss
 on-button-middle=none
 on-button-right=dismiss-all
 on-touch=dismiss
-on-notify=exec mpv ~/Sounds/ASDIC.wav
+on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/dialog-information.oga
 
 # STYLE OPTIONS
 font=MesloLGS 12
@@ -52,6 +52,6 @@ default-timeout=0
 default-timeout=1000
 on-notify=none
 
-[app-name=notify-send]
-default-timeout=500
+[app-name=Spotify]
 on-notify=none
+

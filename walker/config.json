@@ -2,7 +2,7 @@
   "builtins": {
     "applications": {
       "actions": true,
-      "context_aware": true,
+      "context_aware": false,
       "name": "applications",
       "placeholder": "Applications",
       "prioritize_new": true,
@@ -15,27 +15,6 @@
       "name": "clipboard",
       "placeholder": "Clipboard",
       "switcher_only": true
-    },
-    "commands": {
-      "name": "commands",
-      "placeholder": "Commands",
-      "switcher_only": true
-    },
-    "custom_commands": {
-      "name": "custom_commands",
-      "placeholder": "Custom Commands"
-    },
-    "dmenu": {
-      "name": "dmenu",
-      "placeholder": "Dmenu",
-      "switcher_only": true
-    },
-    "emojis": {
-      "history": true,
-      "name": "emojis",
-      "placeholder": "Emojis",
-      "switcher_only": true,
-      "typeahead": true
     },
     "finder": {
       "concurrency": 8,
@@ -52,29 +31,6 @@
       "placeholder": "Runner",
       "refresh": true,
       "typeahead": true
-    },
-    "ssh": {
-      "history": true,
-      "name": "ssh",
-      "placeholder": "SSH",
-      "refresh": true,
-      "switcher_only": true
-    },
-    "switcher": {
-      "name": "switcher",
-      "placeholder": "Switcher",
-      "prefix": "/"
-    },
-    "websearch": {
-      "engines": [
-        "google"
-      ],
-      "name": "websearch",
-      "placeholder": "Websearch"
-    },
-    "windows": {
-      "name": "windows",
-      "placeholder": "Windows"
     }
   },
   "list": {

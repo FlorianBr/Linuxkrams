@@ -1,5 +1,9 @@
+
 configuration {
-  font: "MesloLGS Nerd Font 16";
+  modi: "window,drun,ssh,combi";
+  combi-modi: "window,drun,ssh";
+  font: "MesloLG Nerd Font 16";
+  show-icons: true;
 
   timeout {
       action: "kb-cancel";

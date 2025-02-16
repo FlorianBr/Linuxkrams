@@ -7,7 +7,7 @@
 * {
     border: none;
     font-family: "MesloLGS Nerd Font";
-    font-size: 10px;
+    font-size: 14px;
     min-height: 11px;
 }
 
@@ -61,10 +61,17 @@ tooltip {
     color: #00FF00;
 }
 
-#workspaces,
+#workspaces {
+    padding: 0;
+    padding-left: 1em;
+    padding-right: 0.25em;
+    background: @main_stage1;
+}
+
 #window,
 #cpu,
 #custom-cpuinfo,
+#custom-gpuinfo,
 #clock,
 #pulseaudio,
 #mpris,
@@ -93,18 +100,12 @@ tooltip {
 }
 
 #custom-left1 {
-    font-size: 11.5pt;
+    font-size: 16pt;
     color: @main_stage1;
     background: transparent;
     margin-bottom: -2px;
     text-shadow: -1px 0px 2px rgba(0, 0, 0, 1);
     padding-left: 2px;
-}
-
-#workspaces {
-    padding: 0;
-    padding-left: 1em;
-    background: @main_stage1;
 }
 
 #custom-right1 {
@@ -114,6 +115,7 @@ tooltip {
     margin-bottom: -2px;
     text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
     padding-right: 3px;
+    margin-top: 0px;
 }
 
 #custom-left2 {
@@ -124,12 +126,19 @@ tooltip {
     border-radius: 10px;
     text-shadow: -1px 0px 2px rgba(0, 0, 0, 1);
     padding-left: 3px;
+    margin-top: 0px;
 }
 
 #custom-cpuinfo {
     padding-left: 1px;
     text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
     background: @main_stage1;
+}
+
+#custom-gpuinfo {
+    padding-left: 1px;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 1);
+    background: @main_stage2;
 }
 
 #custom-left3 {
@@ -139,6 +148,7 @@ tooltip {
     margin-bottom: -2px;
     text-shadow: -1px 0px 2px rgba(0, 0, 0, 1);
     padding-left: 3px;
+    margin-top: 0px;
 }
 
 #memory {
@@ -154,6 +164,7 @@ tooltip {
     margin-bottom: -2px;
     text-shadow: -1px 0px 2px rgba(0, 0, 0, 1);
     padding-left: 3px;
+    margin-top: 0px;
 }
 
 #cpu {
@@ -166,6 +177,7 @@ tooltip {
     color: @main_stage4;
     background: @main_stage3;
     margin-bottom: -2px;
+    margin-top: 0px;
 }
 
 #window {
@@ -178,6 +190,7 @@ tooltip {
     color: @main_stage4;
     background: @main_stage3;
     margin-bottom: -2px;
+    margin-top: 0px;
 }
 
 #clock.time {
@@ -192,16 +205,12 @@ tooltip {
     margin-bottom: -2px;
     text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
     padding-right: 3px;
+    margin-top: 0px;
 }
 
 #clock.date {
     text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
     background: @main_stage3;
-}
-
-#battery {
-    text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
-    background: @main_stage2;
 }
 
 #custom-right3 {
@@ -211,6 +220,7 @@ tooltip {
     margin-bottom: -2px;
     text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
     padding-right: 3px;
+    margin-top: 0px;
 }
 
 #disk {
@@ -225,6 +235,7 @@ tooltip {
     margin-bottom: -2px;
     text-shadow: 1px 0px 2px rgba(0, 0, 0, 1);
     padding-right: 3px;
+    margin-top: 0px;
 }
 
 #privacy {
@@ -244,6 +255,7 @@ tooltip {
     margin-bottom: -2px;
     text-shadow: -1px 0px 2px rgba(0, 0, 0, 1);
     padding-left: 3px;
+    margin-top: 0px;
 }
 
 #custom-clipboard {
@@ -258,6 +270,7 @@ tooltip {
     margin-bottom: -2px;
     text-shadow: -1px 0px 2px rgba(0, 0, 0, 1);
     padding-left: 3px;
+    margin-top: 0px;
 }
 
 #pulseaudio {
@@ -272,6 +285,7 @@ tooltip {
     margin-bottom: -2px;
     text-shadow: -1px 0px 2px rgba(0, 0, 0, 1);
     padding-left: 3px;
+    margin-top: 0px;
 }
 
 #tray {
@@ -286,6 +300,7 @@ tooltip {
     margin-bottom: -2px;
     text-shadow: -1px 0px 2px rgba(0, 0, 0, 1);
     padding-left: 3px;
+    margin-top: 0px;
 }
 
 #custom-lock,
@@ -295,7 +310,7 @@ tooltip {
 }
 
 #custom-paddingr {
-    font-size: 16pt;
+    font-size: 11.5pt;
     margin-bottom: -2px;
     padding-right: 2px;
     background: @main_stage4;

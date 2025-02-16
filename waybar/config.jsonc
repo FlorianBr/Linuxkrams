@@ -15,7 +15,7 @@
         "custom/left2",
         "custom/cpuinfo",
         "custom/left3",
-        "memory",
+        "custom/gpuinfo",
         "custom/left4",
         "cpu",
         "custom/leftin1",
@@ -25,6 +25,7 @@
         "clock#date",
         "custom/right2",
         "battery",
+        "memory",
         "custom/right3",
         "disk",
         "custom/right4",
@@ -82,8 +83,8 @@
         "active-only": false,
         "on-click": "activate",
         "disable-scroll": false,
-        "on-scroll-up": "hyprctl dispatch workspace e+1",
-        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "on-scroll-up": "hyprctl dispatch workspace -1",
+        "on-scroll-down": "hyprctl dispatch workspace +1",
         "separate-outputs": true,
         "format": "<span font='16px'>{icon}</span>{windows}",
         "format-icons": {
@@ -140,6 +141,15 @@
         "min-length": 8,
         "max-length": 8
     },
+    "custom/gpuinfo": {
+        "exec": "~/.config/waybar/scripts/gpuinfo.sh",
+        "return-type": "json",
+        "format": "{}",
+        "tooltip": true,
+        "interval": 5,
+        "min-length": 8,
+        "max-length": 8
+    },
     "memory": {
         "states": {
             "c": 90
@@ -147,7 +157,7 @@
         "format": "󰘚 {percentage}%",
         "format-c": "󰀪 {percentage}%",
         "tooltip": true,
-        "tooltip-format": "{used:0.1f}GB / {total:0.1f}GB",
+        "tooltip-format": "RAM: {used:0.1f}GB / {total:0.1f}GB",
         "interval": 20,
         "min-length": 7,
         "max-length": 7
@@ -226,7 +236,7 @@
     },
     "mpris": {
         "format": "{artist} - {title}",
-        "max-length": 40
+        "max-length": 60
     },
     "privacy": {
         "icon-spacing": 4,
